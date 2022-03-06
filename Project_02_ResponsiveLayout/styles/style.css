@@ -1,0 +1,304 @@
+/* --- Universal --- */
+* {
+    box-sizing: border-box; 
+        /* padding and border included in the width and height. */
+    margin: 0;
+    padding: 0;
+}
+
+/* ---/// Main Element Styles ///--- */
+
+body {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    margin: 0 auto;
+        /* to remove default browser margins (normalize) */ 
+    font-size: 1em;
+        /* initial font size equal to user settings */
+    text-align: center;
+}
+
+h1, h2, h3, h4, a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+} 
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+        /* responsive images */
+}
+
+/* ---/// Basic Layouts & Styles ///--- */
+
+header, .bio-wrap, .cont-sep, .cont-wrap, footer  {
+    min-width: 100vw;
+    background-color: steelblue;
+}
+
+main {
+    background-color: ghostwhite;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* ---/// Top Navigation ///--- */ 
+
+.top-nav-wrap {
+    padding-top: 15px;
+}
+
+.name, .top-nav li { 
+    font-weight: 600;
+}
+
+.name {
+    font-size: 1.3em;
+    color: ghostwhite;
+    text-shadow: 3px 4px 3px black;
+}
+
+.top-nav li {
+    text-transform: uppercase;
+}
+
+.top-nav {
+    padding: 15px 0;
+}
+
+.top-nav li {
+    max-width: 75%;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: lightsteelblue;
+    box-shadow: 3px 4px 3px black;
+    border-radius: 10px;
+}
+
+/* ---/// Bio ///--- */
+
+.bio-wrap {
+    background-image: linear-gradient(steelblue 90%, ghostwhite 100%); 
+}
+
+.bio {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.bio img {
+    max-width: 75%;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 3px 4px 3px black;
+}
+
+.bio p {
+    font-weight: 600;
+    max-width: 75%; 
+    margin: 0 auto;
+    padding: 20px 0 50px;
+}
+
+/* ---/// Seperators ///--- */
+
+.seperator {
+    font-size: .9rem;
+    text-transform: uppercase;
+    padding: 5px 0;
+    margin: 25px 0;
+}
+
+.cont-sep {
+    padding-top: 50px;
+    margin-bottom: 0;
+    background-image: linear-gradient(ghostwhite 0%, steelblue 50%)
+}
+
+/* ---/// Portfolio ///--- */
+
+.port-wrap {
+    padding: 5px 15px;
+    margin-bottom: 60px;
+}
+
+.col {
+    padding: 10px;
+    margin: 20px 0;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    box-shadow: 5px 6px 4px black;
+}
+
+.col img {
+    border-radius: 5px;
+}
+
+h3 {
+    margin: 10px 2rem 0;
+    padding: 5px 0;
+}
+
+.col p {
+    padding: 5px;
+    margin: 10px;
+}
+
+
+/* ---/// Skills ///--- */
+
+.sk-wrap {
+    padding: 5px 0;
+    margin: 15px auto;
+}
+
+.sk-list li {
+    display: inline-block;
+    max-width: 30%;
+}
+
+.logo-grad {
+    padding: 5px;
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.8) 30%, ghostwhite 65%);
+}
+
+/* ---/// Contacts ///--- */
+
+.cont-wrap p {
+    padding: 20px 15px 0;
+    margin: 0 40px;
+}
+
+h4 {
+    padding: 5px;
+    margin-top: 20px;
+}
+
+/* ---/// Bottom Navigation ///--- */
+.bottom-name {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.footer-nav a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.full {
+    display: none;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    padding: 30px 20px 20px;
+    margin: 0 auto;
+}
+
+/* ---/// Media Queries ///--- */
+
+@media screen and (min-width: 768px) {
+
+    /* -MQ Top Navigation 768- */
+    
+    .top-nav li {
+        padding: 5px 15px;
+        margin: 0;
+        margin-right: 15px;
+        display: inline-block;
+    }
+
+    /* -MQ Bio 768- */
+
+    .bio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .bio img, .bio p{
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .bio li:first-child {
+        order: 1;
+    }
+
+    .bio li {
+        width: 50%;
+    }
+
+    /* -MQ Portfolio 768- */
+
+    .port-wrap {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1024px;
+        margin: 0 auto 60px;
+    }
+
+    .col {
+        margin: 20px;
+        flex-basis: calc(50% - 40px); 
+    }
+
+    /* -MQ Bottom Navigation 768- */
+
+    .top {
+        display: none;
+    }
+
+    .full {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* -MQ Top Nav 1024- */
+
+    .top-nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .top-nav li:last-child {
+        margin-right: 30px;
+    }
+
+    .name {
+        margin-left: 30px;
+    }
+
+    /* -MQ Portfolio 1024- */
+
+    .col {
+        margin: 20px;
+        flex-basis: calc(33.33% - 40px); 
+    }
+    
+}
