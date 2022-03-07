@@ -40,7 +40,7 @@ img {
 
 /* ---/// Basic Layouts & Styles ///--- */
 
-header, .bio-wrap, .cont-sep, .cont-wrap, footer  {
+header, .bio-wrap, .cont-ban, .cont-wrap, footer  {
     min-width: 100vw;
     background-color: steelblue;
 }
@@ -87,12 +87,13 @@ main {
 /* ---/// Bio ///--- */
 
 .bio-wrap {
-    background-image: linear-gradient(steelblue 90%, ghostwhite 100%); 
+    background-color: ghostwhite;
 }
 
 .bio {
     max-width: 1024px;
     margin: 0 auto;
+    background-image: linear-gradient(to bottom, steelblue 90%, ghostwhite 100%);
 }
 
 .bio img {
@@ -105,30 +106,36 @@ main {
 .bio p {
     font-weight: 600;
     max-width: 75%; 
+    padding-top: 20px;
+    padding-bottom: 60px;
     margin: 0 auto;
-    padding: 20px 0 50px;
+    
 }
 
-/* ---/// Seperators ///--- */
+/* ---/// Banners ///--- */
 
-.seperator {
+.banner {
     font-size: .9rem;
     text-transform: uppercase;
     padding: 5px 0;
     margin: 25px 0;
 }
 
-.cont-sep {
+.port-ban {
+    background-color: ghostwhite;
+}
+
+.cont-ban {
     padding-top: 50px;
     margin-bottom: 0;
-    background-image: linear-gradient(ghostwhite 0%, steelblue 50%)
+    background-image: linear-gradient(to top, steelblue 50%, ghostwhite 100%);
 }
 
 /* ---/// Portfolio ///--- */
 
 .port-wrap {
     padding: 5px 15px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
 }
 
 .col {
@@ -185,6 +192,7 @@ h4 {
 }
 
 /* ---/// Bottom Navigation ///--- */
+
 .bottom-name {
     font-weight: 600;
     font-size: 1.1em;
@@ -231,7 +239,7 @@ h4 {
         justify-content: space-between;
         align-items: center;
         padding-top: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
     
     .bio img, .bio p{
@@ -254,7 +262,7 @@ h4 {
         justify-content: center;
         flex-wrap: wrap;
         max-width: 1024px;
-        margin: 0 auto 60px;
+        margin: 0 auto;
     }
 
     .col {
